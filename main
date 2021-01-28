@@ -1,0 +1,62 @@
+'''
+Name: Bridget Naylor
+Date: 1/28/2021
+Class: CECS 229 Section 09
+1. Euclydian
+2. Binary to Decimal
+3. Rect class
+
+'''
+'1.Euclydian'
+
+'''
+'2.Binary to Decimal'
+def binToDeci( binNum ):
+    deciNum = 0
+    deciPlace = 0
+    numToAdd = 0
+    while( binNum != 0 ):
+        numToAdd = (2 * (binNum % 10))
+        if numToAdd > 0:
+            numToAdd = numToAdd ** deciPlace
+        deciNum += numToAdd
+        deciPlace = deciPlace + 1
+        binNum = binNum // 10;
+    print("in function ", deciNum )
+    
+    
+binToDeci( 1 )
+binToDeci( 10 )
+binToDeci( 110 )
+binToDeci( 1010 )
+binToDeci( 1110 )
+'3.Rect Class'
+
+class Rectangle:
+    width = 0.0
+    height = 0.0
+    
+    def __init__(self):
+        self.width = 1.0
+        self.height = 1.0
+        
+    def __init__(self, width, height ):
+        self.width = width
+        self.height = height
+        
+    def getArea(self):
+        return self.width * self.height
+        
+    def getPerimeter(self):
+        return self.width * 2 + self.height * 2
+        
+Rect1 = Rectangle( 4, 40 )
+Rect2 = Rectangle( 3.5, 35.9 )
+print ('Rect1 width = ', Rect1.width, " height = ", Rect1.height, " area = ", Rect1.getArea(), " perimeter = ", Rect1.getPerimeter() )
+print ('Rect2 width = ', Rect2.width, " height = ", Rect2.height, " area = ", Rect2.getArea(), " perimeter = ", Rect2.getPerimeter() )
+'''
+
+
+
+
+
